@@ -7,5 +7,10 @@ pipeline {
         archiveArtifacts 'test.txt'
       }
     }
+    stage('Publish'){
+      steps {
+        s3Upload (file:'test.txt',bucket:'prabha-jenkins-artifacts')
+      }
+    }
   }
 }
