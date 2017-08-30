@@ -9,7 +9,7 @@ pipeline {
     }
     stage('Publish'){
       steps {
-        s3Upload (file:'test.txt',bucket:'prabha-jenkins-artifacts')
+        s3Upload (file:'test.txt',bucket:'prabha-jenkins-artifacts',path:/test/)
       }
     }
   }
